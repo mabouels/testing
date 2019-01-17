@@ -4,4 +4,4 @@ steps:
 - name: gcr.io/$PROJECT_ID/firex_sphinx
   args: ['sphinx-build', '-b', 'html', 'firexkit/docs', 'html']
 - name: gcr.io/cloud-builders/gsutil
-  args: ['rsync', '-d', '-r', 'html', 'gs://www.firexkit.com']
+  args: ['rsync', '-r', 'html', 'gs://www.firexkit.com']
