@@ -1,5 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/git'
+- name: gcr.io/cloud-builders/git
   args: ['clone', 'https://github.com/mabouels/testing.git']
-- name: gcr.io/cloud-builders/docker
-  args: ['run', 'gcr.io/$PROJECT_ID/firex_sphinx', 'ls', '/']
+- name: firex_sphinx
+  args: ['ls']
+
+#- name: gcr.io/cloud-builders/docker
+#  args: ['run', 'gcr.io/$PROJECT_ID/firex_sphinx', 'ls', '/']
