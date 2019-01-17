@@ -1,5 +1,5 @@
 steps:
 - name: gcr.io/cloud-builders/git
-  args: ['clone', 'https://github.com/mabouels/testing.git']
+  args: ['clone', 'https://github.com/FireXStuff/firexkit.git']
 - name: gcr.io/$PROJECT_ID/firex_sphinx
-  args: ['ls', 'testing']
+  args: ['sphinx-build', '-b', '-hml', 'firexkit/docs', 'html']
